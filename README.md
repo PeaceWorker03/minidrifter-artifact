@@ -63,7 +63,7 @@ minidrifter-artifact/
 
 | Path | Role |
 |------|------|
-| [`Data/`](Data/) | Evaluation data: RQ1 sample-level results, RQ2 full-scale corpus tables, RQ4 cross-platform results, and PoC materials. Large source packages are provided via [Release](https://github.com/PeaceWorker03/minidrifter-artifact/releases/tag/data-sources-v1). |
+| [`Data/`](Data/) | Evaluation data: RQ1 sample-level results, RQ2 full-scale corpus tables, RQ4 cross-platform results, PoC materials, and **official vulnerability acknowledgments** (CNVD / Butian / Vulbox certificates). Large source packages are provided via [Release](https://github.com/PeaceWorker03/minidrifter-artifact/releases/tag/data-sources-v1). |
 | [`MiniCollector/`](MiniCollector/) | Automated mini-program **collection** via UI-control localization on PC WeChat, package capture, WeDecode unpacking, and category classification. |
 | [`MiniDrifter/`](MiniDrifter/) | Hybrid **detection** framework: static RCR → RPGraph → RR-Drift chains, plus dynamic perturbation validation. |
 
@@ -211,7 +211,9 @@ See [`Data/README.md`](Data/README.md) for folder-level descriptions.
 | `Data/419mintesapp/` | RQ1: 419-app sample-level detection results |
 | `Data/FullScaleCorpus/` | RQ2: 41,362-program / 31,842-threat tables |
 | `Data/CrossPlatformTransfer/` | RQ4: matching, manual reconfirmation, detection |
-| `Data/Proof of Concept/` | Representative case materials |
+| `Data/Proof of Concept/` | Representative PoC materials **and received vulnerability acknowledgments** (CNVD / Butian QTVA / Vulbox certificate screenshots) |
+
+Acknowledgment IDs currently included under `Data/Proof of Concept/` include CNVD-2026-25520, CNVD-2026-32955, CNVD-2026-36635, CNVD-2026-36806, CNVD-2026-36815, CNVD-2026-36844, CNVD-2026-36915, QTVA-2026-10738721, QTVA-2026-10766072, QTVA-2026-10766087, and vulbox-2026-03573200.
 
 RQ1 unpacked sources (`419mintesapp_source.zip`, ~1.4 GB) are **not** stored in git; download from:
 

@@ -4,7 +4,7 @@ FullScaleCorpus：该文件夹包含 RQ2 全量语料评测结果，覆盖 41,36
 
 CrossPlatformTransfer：该文件夹包含 RQ4 跨平台迁移评测结果，记录从微信受影响样本到 QQ、支付宝、抖音、百度的匹配关系、人工复验结论，以及适配后 MiniDrifter 的检测结果。
 
-Proof of Concept：该文件夹包含代表性案例的概念验证材料与相关佐证文件。
+Proof of Concept：该文件夹包含代表性案例的概念验证材料，以及已收到的官方漏洞认证/致谢凭证（CNVD、补天 Butian/QTVA、Vulbox 等编号截图）。
 
 419mintesapp_source.zip：RQ1 所用 419 个小程序源码打包文件（约 1.4GB，超过 git 单文件限制）。请从 Release 下载：https://github.com/PeaceWorker03/minidrifter-artifact/releases/tag/data-sources-v1
 
