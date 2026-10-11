@@ -1,0 +1,23 @@
+{
+  "app_id": "wxe6bd8587c31ac7b6",
+  "name": "wxe6bd8587c31ac7b6",
+  "quota_category": "Shopping",
+  "evidence_path": "E:\\MiniCrest\\Data\\商城与零售\\wxe6bd8587c31ac7b6",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 2,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 2,
+    "minidrifter_tp": 4,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 4
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}

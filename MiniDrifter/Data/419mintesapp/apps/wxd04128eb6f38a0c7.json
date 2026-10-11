@@ -1,0 +1,61 @@
+{
+  "app_id": "wxd04128eb6f38a0c7",
+  "name": "交通银行",
+  "quota_category": "Finance",
+  "evidence_path": "E:\\MiniCrest\\Data\\政务、缴费及其他服务\\交通银行_wxd04128eb6f38a0c7",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 1,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 1,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 2,
+    "minidrifter_tp": 2,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 2
+  },
+  "real_static": {
+    "appid": "wxd04128eb6f38a0c7",
+    "nickname": "交通银行",
+    "category": "政务、缴费及其他服务",
+    "path": "E:\\MiniCrest\\Data\\政务、缴费及其他服务\\交通银行_wxd04128eb6f38a0c7",
+    "pack": "E:\\MiniCrest\\Data\\政务、缴费及其他服务\\交通银行_wxd04128eb6f38a0c7\\OUTPUT",
+    "started_at": "2026-10-10T04:51:45Z",
+    "contract": 95.94,
+    "workflow": 93.62,
+    "c_ok": true,
+    "w_ok": true,
+    "incomplete": false,
+    "passed": true,
+    "hard": [],
+    "soft": [],
+    "host": "https://work.weixin.qq.com",
+    "host_strategy": "business_explicit_pool",
+    "rcr_count": 162,
+    "with_bind": 5,
+    "wf": 18,
+    "drift": 6,
+    "nodes": null,
+    "edges": null,
+    "status": "ok",
+    "band_ok": true,
+    "elapsed_s": 154.3,
+    "finished_at": "2026-10-10T04:54:19Z"
+  },
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 31,
+      "credential_count": 60,
+      "binding_edge_count": 201,
+      "workflow_count": 2,
+      "crbd_candidate_count": 1,
+      "elapsed_sec": 2.42
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wxd04128eb6f38a0c7\\annotation.json"
+  },
+  "record_status": "real_md+silver+paper_detection"
+}
