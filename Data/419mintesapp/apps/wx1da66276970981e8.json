@@ -1,0 +1,34 @@
+{
+  "app_id": "wx1da66276970981e8",
+  "name": "兔喜生活",
+  "quota_category": "Entertainment",
+  "evidence_path": "E:\\MiniCrest\\Data\\餐饮、生活消费\\兔喜生活_wx1da66276970981e8",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 2,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 2
+  },
+  "real_static": null,
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 7,
+      "credential_count": 16,
+      "binding_edge_count": 12,
+      "workflow_count": 1,
+      "crbd_candidate_count": 0,
+      "elapsed_sec": 2.81
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wx1da66276970981e8\\annotation.json"
+  },
+  "record_status": "silver+paper_detection"
+}

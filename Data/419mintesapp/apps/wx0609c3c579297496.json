@@ -1,0 +1,34 @@
+{
+  "app_id": "wx0609c3c579297496",
+  "name": "甘肃农业大学",
+  "quota_category": "Education",
+  "evidence_path": "E:\\MiniCrest\\Data\\校园与教育\\甘肃农业大学_wx0609c3c579297496",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 1,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 1,
+    "minidrifter_tp": 3,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 3
+  },
+  "real_static": null,
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 6,
+      "credential_count": 2,
+      "binding_edge_count": 6,
+      "workflow_count": 1,
+      "crbd_candidate_count": 1,
+      "elapsed_sec": 0.15
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wx0609c3c579297496\\annotation.json"
+  },
+  "record_status": "silver+paper_detection"
+}

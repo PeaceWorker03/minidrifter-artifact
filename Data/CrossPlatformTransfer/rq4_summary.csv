@@ -1,0 +1,6 @@
+Platform,Matched_Programs,Reconfirmed_Programs,GT_Threats,TP,FP,FN,Precision,Recall,F1
+QQ,162,162,356,356,4,0,98.9,100.0,99.4
+Alipay,38,38,82,74,5,8,93.7,90.2,91.9
+Douyin,19,15,37,32,3,5,91.4,86.5,88.9
+Baidu,13,11,26,22,3,4,88.0,84.6,86.3
+Total,232,226,501,484,15,17,97.0,96.6,96.8

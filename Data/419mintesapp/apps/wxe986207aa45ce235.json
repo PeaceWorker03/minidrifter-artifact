@@ -1,0 +1,34 @@
+{
+  "app_id": "wxe986207aa45ce235",
+  "name": "AI快销",
+  "quota_category": "Shopping",
+  "evidence_path": "E:\\MiniCrest\\Data\\商城与零售\\AI快销_wxe986207aa45ce235",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 0,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 0,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 0,
+    "gt_threats": 0
+  },
+  "real_static": null,
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 26,
+      "credential_count": 47,
+      "binding_edge_count": 200,
+      "workflow_count": 1,
+      "crbd_candidate_count": 1,
+      "elapsed_sec": 2.4
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wxe986207aa45ce235\\annotation.json"
+  },
+  "record_status": "silver+paper_detection"
+}

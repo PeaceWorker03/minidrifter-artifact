@@ -1,0 +1,23 @@
+{
+  "app_id": "wxf6de500316e2099d",
+  "name": "富贵楼美食坊",
+  "quota_category": "Entertainment",
+  "evidence_path": "E:\\MiniCrest\\Data\\餐饮、生活消费\\富贵楼美食坊_wxf6de500316e2099d",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 0,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 0,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 0,
+    "gt_threats": 0
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}

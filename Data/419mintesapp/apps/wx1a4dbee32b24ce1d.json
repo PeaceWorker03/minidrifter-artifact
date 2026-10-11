@@ -1,0 +1,23 @@
+{
+  "app_id": "wx1a4dbee32b24ce1d",
+  "name": "蝎王府扫码点餐",
+  "quota_category": "Entertainment",
+  "evidence_path": "E:\\MiniCrest\\Data\\餐饮、生活消费\\蝎王府扫码点餐_wx1a4dbee32b24ce1d",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 2,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 2
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}

@@ -1,0 +1,23 @@
+{
+  "app_id": "wx48cf60c632f754f4",
+  "name": "新疆维吾尔自治区博物馆",
+  "quota_category": "Tourism",
+  "evidence_path": "E:\\MiniCrest\\Data\\景区、票务与预约\\新疆维吾尔自治区博物馆_wx48cf60c632f754f4",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 0,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 0,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 0,
+    "gt_threats": 0
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}
