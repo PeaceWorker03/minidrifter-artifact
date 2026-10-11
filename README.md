@@ -35,13 +35,13 @@ At the most critical stage of payment-password verification, `user_A` continues 
 ## Approach
 
 <p align="center">
-  <img src="Fig/Fig3.png" alt="MiniDrifter hybrid detection workflow" width="90%"/>
+  <img src="Fig/Fig2.png" alt="MiniDrifter hybrid detection workflow" width="90%"/>
 </p>
-<p align="center"><em>Figure 3.</em> Overview of <em>MiniDrifter</em>: static drift-oriented taint analysis and dynamic perturbation validation. [<a href="Fig/Fig3.pdf">PDF</a>]</p>
+<p align="center"><em>Figure 2.</em> Overview of <em>MiniDrifter</em>: static drift-oriented taint analysis and dynamic perturbation validation. [<a href="Fig/Fig2.pdf">PDF</a>]</p>
 
 From the four conditions defined in the problem formulation, the detection of RR-Drift propagation threats can be naturally formulated as a taint-oriented reachability problem. In particular, the drifted resource reference serves as the *source*, while the sensitive-risk resource reference serves as the *sink*. The key question is whether there exists a cross-API reference dependency chain that propagates a drifted reference from the source to the sink within the workflow.
 
-As shown in Figure 3, we design and implement **MiniDrifter**, the first hybrid framework for detecting RR-Drift propagation threats in mini programs. MiniDrifter consists of two tightly coupled components: a *static drift-oriented taint analyzer* and a *dynamic perturbation validator*, which are designed to address the challenges of complex propagation dependencies and uncertain drift values, respectively.
+As shown in Figure 2, we design and implement **MiniDrifter**, the first hybrid framework for detecting RR-Drift propagation threats in mini programs. MiniDrifter consists of two tightly coupled components: a *static drift-oriented taint analyzer* and a *dynamic perturbation validator*, which are designed to address the challenges of complex propagation dependencies and uncertain drift values, respectively.
 
 The static taint analyzer first extracts resource-reference-related request information and organizes it into a structured representation (**RCR**, step ①). Based on the extracted representation nodes and their dependency relations, it then constructs a global propagation graph for resource references in the target mini program (**RPGraph**, step ②). On top of the constructed graph, MiniDrifter further identifies sensitive reference-related nodes and performs backward drift-oriented taint analysis to recover candidate risky RR-Drift propagation chains (step ③), which are then passed to the dynamic component for further validation.
 
@@ -55,7 +55,7 @@ The dynamic perturbation validator takes the candidate RR-Drift propagation chai
 minidrifter-artifact/
 ├── Fig/                 # Paper figures used in this README
 │   ├── Fig1.pdf / .png  # Motivation case (RR-Drift workflow)
-│   └── Fig3.pdf / .png  # MiniDrifter approach overview
+│   └── Fig2.pdf / .png  # MiniDrifter approach overview
 ├── Data/                # Experiment artifacts (RQ1 / RQ2 / RQ4 / PoC)
 ├── MiniCollector/       # Collection & package reverse-analysis (Windows)
 └── MiniDrifter/         # Hybrid RR-Drift detection framework (Linux)
