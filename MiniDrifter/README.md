@@ -7,8 +7,6 @@ It implements the approach in the paper:
 1. **Static drift-oriented taint analysis** — RCR → RPGraph → risky RR-Drift propagation chains  
 2. **Dynamic perturbation validation** with adaptive execution repair  
 
-Paper name alignment (tool / artifacts / stages) is documented in [`PAPER_ALIGNMENT.md`](PAPER_ALIGNMENT.md).
-
 ## Runtime Environment
 
 The MiniDrifter framework runs on an Ubuntu 24.04 LTS server with a 24-core CPU, 64 GB of memory, and Python 3.12.5, using eight parallel worker processes.
@@ -29,7 +27,7 @@ cd tools/jsparser
 npm install
 ```
 
-## Analyze (paper static pipeline)
+## Analyze
 
 ```bash
 python -m minidrifter.cli analyze \
@@ -38,7 +36,7 @@ python -m minidrifter.cli analyze \
   --platform wechat
 ```
 
-Rebuild RCR / RPGraph / RR-Drift chains on an existing pack:
+Rebuild propagation artifacts on an existing pack:
 
 ```bash
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT
@@ -46,25 +44,24 @@ python -m minidrifter.cli paper-static -i /path/to/OUTPUT
 
 Supported `--platform` values include `wechat`, `qq`, `alipay`, `douyin`, `baidu`.
 
-## Paper artifacts under `OUTPUT/`
+## Main outputs under `OUTPUT/`
 
-| Artifact | Paper term |
-|----------|------------|
-| `rcr_pack.json` | **RCR** — Reference Contract Representation |
-| `rpgraph.json` | **RPGraph** — Reference Propagation Graph \((N,E)\) |
-| `rrdrift_propagation_chains.json` | Risky **RR-Drift propagation chains** |
-| `workflows.json` | Alias of chain set |
-| `drift_plans.json` | Perturbation plans for dynamic validation |
+| File | Description |
+|------|-------------|
+| `rcr_pack.json` | Per-request reference contracts recovered from the mini program |
+| `rpgraph.json` | Reference propagation graph over API / reference nodes and edges |
+| `rrdrift_propagation_chains.json` | Candidate RR-Drift chains from drift sources to sensitive sinks |
+| `workflows.json` | Convenience export of the same chain set |
+| `drift_plans.json` | Plans used by the dynamic validator to perturb source references |
 
 ## Layout
 
 ```text
 MiniDrifter/
-├── minidrifter/          # tool source (CLI, RCR, RPGraph, RR-Drift, runtime)
-├── tests/                # unit / regression tests
+├── minidrifter/          # tool source (CLI, static analysis, runtime validation)
+├── tests/
 ├── tools/jsparser/       # optional JS call-site scanner
 ├── pyproject.toml
-├── PAPER_ALIGNMENT.md
 ├── RUNTIME_ENVIRONMENT.md
 └── README.md
 ```

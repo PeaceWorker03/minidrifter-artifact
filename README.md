@@ -188,17 +188,19 @@ python -m minidrifter.cli analyze \
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT
 ```
 
-### Paper-aligned outputs under `OUTPUT/`
+### Main outputs under `OUTPUT/`
 
-| File | Paper term |
-|------|------------|
-| `rcr_pack.json` | **RCR** — Reference Contract Representation |
-| `rpgraph.json` | **RPGraph** — Reference Propagation Graph \((N,E)\) |
-| `rrdrift_propagation_chains.json` | Risky **RR-Drift propagation chains** |
-| `workflows.json` | Alias of the chain set |
-| `drift_plans.json` | Perturbation plans for dynamic validation |
+After analysis, MiniDrifter writes intermediate and final results into the output directory, including:
 
-Name mapping details: [`MiniDrifter/PAPER_ALIGNMENT.md`](MiniDrifter/PAPER_ALIGNMENT.md).
+| File | Description |
+|------|-------------|
+| `rcr_pack.json` | Per-request reference contracts recovered from the mini program |
+| `rpgraph.json` | Reference propagation graph over API / reference nodes and edges |
+| `rrdrift_propagation_chains.json` | Candidate RR-Drift chains from drift sources to sensitive sinks |
+| `workflows.json` | Convenience export of the same chain set |
+| `drift_plans.json` | Plans used by the dynamic validator to perturb source references |
+
+See [`MiniDrifter/README.md`](MiniDrifter/README.md) for CLI details and more options.
 
 ---
 
