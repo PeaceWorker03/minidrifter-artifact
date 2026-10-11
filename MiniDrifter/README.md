@@ -42,7 +42,7 @@ Rebuild propagation artifacts on an existing pack:
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT
 ```
 
-Supported `--platform` values include `wechat`, `qq`, `alipay`, `douyin`, `baidu`.
+`--platform` selects the mini-program API surface (default `wechat`): `wechat`, `alipay`, `baidu`, `tiktok`.
 
 ## Main outputs under `OUTPUT/`
 

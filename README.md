@@ -154,7 +154,7 @@ Emergency stop for UI collection: move the mouse to the **top-left corner** of t
 4. Optional: Node.js for `tools/jsparser` (JS call-site helper).
 5. For **dynamic** validation: runtime materials / session context for the target app (platform-dependent); static `analyze` / `paper-static` can run without live login.
 
-Supported `--platform` values include `wechat`, `qq`, `alipay`, `douyin`, and `baidu` (lightweight platform-aware adaptation for RQ4).
+`--platform` selects which mini-program API surface to recognize (default `wechat`). Choices: `wechat`, `alipay`, `baidu`, `tiktok`.
 
 ### Install
 
