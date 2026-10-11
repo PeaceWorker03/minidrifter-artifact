@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+_*.log
+_*progress*.json
+_*.lock
+_pane_capture.png
+config.json
+!config.example.json
+Data/
+_raw/
+_reports/
+_processed.json
+node_modules/
