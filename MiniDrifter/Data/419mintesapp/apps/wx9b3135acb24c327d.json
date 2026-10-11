@@ -1,0 +1,23 @@
+{
+  "app_id": "wx9b3135acb24c327d",
+  "name": "贵州银行商户通",
+  "quota_category": "Finance",
+  "evidence_path": "E:\\MiniCrest\\Data\\企业与办公服务\\贵州银行商户通_wx9b3135acb24c327d",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 1,
+    "taintmini_tp": 3,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 3,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 3
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}

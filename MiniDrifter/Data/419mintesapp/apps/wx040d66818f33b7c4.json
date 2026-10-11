@@ -1,0 +1,34 @@
+{
+  "app_id": "wx040d66818f33b7c4",
+  "name": "wx040d66818f33b7c4",
+  "quota_category": "Life Services",
+  "evidence_path": "E:\\MiniCrest\\Data\\交通出行、租车服务\\wx040d66818f33b7c4",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 2,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 2
+  },
+  "real_static": null,
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 23,
+      "credential_count": 34,
+      "binding_edge_count": 200,
+      "workflow_count": 1,
+      "crbd_candidate_count": 1,
+      "elapsed_sec": 1.18
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wx040d66818f33b7c4\\annotation.json"
+  },
+  "record_status": "silver+paper_detection"
+}

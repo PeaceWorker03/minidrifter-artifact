@@ -1,0 +1,61 @@
+{
+  "app_id": "wx16f2c7195f83fc2e",
+  "name": "新疆维吾尔自治区博物馆",
+  "quota_category": "Tourism",
+  "evidence_path": "E:\\MiniCrest\\Data\\景区、票务与预约\\新疆维吾尔自治区博物馆_wx16f2c7195f83fc2e",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 0,
+    "keymagnet_fp": 1,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 0,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 0,
+    "gt_threats": 0
+  },
+  "real_static": {
+    "appid": "wx16f2c7195f83fc2e",
+    "nickname": "新疆维吾尔自治区博物馆",
+    "category": "景区、票务与预约",
+    "path": "E:\\MiniCrest\\Data\\景区、票务与预约\\新疆维吾尔自治区博物馆_wx16f2c7195f83fc2e",
+    "pack": "E:\\MiniCrest\\Data\\景区、票务与预约\\新疆维吾尔自治区博物馆_wx16f2c7195f83fc2e\\OUTPUT",
+    "started_at": "2026-10-10T06:46:25Z",
+    "contract": 94.73,
+    "workflow": 95.72,
+    "c_ok": true,
+    "w_ok": true,
+    "incomplete": false,
+    "passed": true,
+    "hard": [],
+    "soft": [],
+    "host": "https://vv.video.qq.com",
+    "host_strategy": "business_explicit_pool",
+    "rcr_count": 313,
+    "with_bind": 179,
+    "wf": 80,
+    "drift": 4771,
+    "nodes": null,
+    "edges": null,
+    "status": "ok",
+    "band_ok": true,
+    "elapsed_s": 412.4,
+    "finished_at": "2026-10-10T06:53:17Z"
+  },
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 80,
+      "credential_count": 44,
+      "binding_edge_count": 200,
+      "workflow_count": 1,
+      "crbd_candidate_count": 1,
+      "elapsed_sec": 7.13
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wx16f2c7195f83fc2e\\annotation.json"
+  },
+  "record_status": "real_md+silver+paper_detection"
+}
