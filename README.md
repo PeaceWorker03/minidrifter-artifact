@@ -65,7 +65,7 @@ minidrifter-artifact/
 |------|------|
 | [`Data/`](Data/) | Evaluation data: RQ1 sample-level results, RQ2 full-scale corpus tables, RQ4 cross-platform results, PoC materials, and **official vulnerability acknowledgments** (CNVD / Butian / Vulbox certificates). Large source packages are provided via [Release](https://github.com/PeaceWorker03/minidrifter-artifact/releases/tag/data-sources-v1). |
 | [`MiniCollector/`](MiniCollector/) | Automated mini-program **collection** via UI-control localization on PC WeChat, package capture, WeDecode unpacking, and category classification. |
-| [`MiniDrifter/`](MiniDrifter/) | Hybrid **detection** framework: static RCR → RPGraph → RR-Drift chains, plus dynamic perturbation validation. |
+| [`MiniDrifter/`](MiniDrifter/) | Hybrid **detection** framework: static chain recovery plus dynamic perturbation validation. |
 
 Public identifiers in `Data/` are anonymized. Do not expect real WeChat appids, backend URLs, tokens, or exploit payloads in the published CSVs.
 
@@ -73,7 +73,7 @@ Public identifiers in `Data/` are anonymized. Do not expect real WeChat appids, 
 
 ## MiniCollector
 
-**Purpose.** Collect real-world WeChat mini programs at scale by driving the PC WeChat client through UI-control localization, capture local code packages, unpack them with WeDecode, and classify recovered apps into the service strata used in RQ2.
+**Purpose.** Collect real-world WeChat mini programs at scale by driving the PC WeChat client through UI-control localization, capture local code packages, unpack them with WeDecode, and classify recovered apps by service category.
 
 ### Runtime environment
 
@@ -84,9 +84,7 @@ Public identifiers in `Data/` are anonymized. Do not expect real WeChat appids, 
 | Memory | 32 GB |
 | Client | WeChat **Windows** desktop (logged-in session required) |
 | Language | Python 3.10+ (3.12 recommended) |
-| Node | Node.js 18+ (`wedecode` CLI) |
-
-> Paper wording: *The collection and package-reversing framework runs on a Windows 11 host equipped with an Intel Core i9-14900KF CPU (24 cores / 32 threads) and 32 GB of memory.*
+| Node | Node.js 18+ (wedecode CLI) |
 
 ### Deployment requirements
 
@@ -143,8 +141,6 @@ Emergency stop for UI collection: move the mouse to the **top-left corner** of t
 | Memory | 64 GB |
 | Python | **3.12.5** |
 | Parallelism | **8** worker processes |
-
-> Paper wording: *The MiniDrifter framework runs on an Ubuntu 24.04 LTS server with a 24-core CPU, 64 GB of memory, and Python 3.12.5, using eight parallel worker processes.*
 
 ### Deployment requirements
 
