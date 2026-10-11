@@ -1,0 +1,23 @@
+{
+  "app_id": "wx00bed543a3e9e5f7",
+  "name": "cdf会员购",
+  "quota_category": "Shopping",
+  "evidence_path": "E:\\MiniCrest\\Data\\商城与零售\\cdf会员购_wx00bed543a3e9e5f7",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 2,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 2,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 2
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}
