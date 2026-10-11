@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Path-plane sensitive field keyword hints (project-agnostic).",
+  "planes": {
+    "user_profile_personal_info": {
+      "business_label": "user_profile_personal_info",
+      "sensitive_field_keywords": [
+        "userid", "customerid", "logincustomerid", "memberid",
+        "name", "nickname", "phone", "mobile", "telephone", "avatar",
+        "birthday", "gender", "level", "vip", "card", "balance", "points", "score"
+      ]
+    },
+    "contact_address_invoice": {
+      "business_label": "contact_address_invoice",
+      "sensitive_field_keywords": [
+        "address", "addr", "receiver", "recipient", "mobile", "phone", "tel",
+        "telephone", "contact", "province", "city", "district", "detail", "name",
+        "mapaddress", "cusaddresses"
+      ]
+    },
+    "account_state_wallet": {
+      "business_label": "account_state_wallet",
+      "sensitive_field_keywords": [
+        "balance", "remain", "money", "amount", "available", "wallet",
+        "point", "score", "total", "consume", "recharge", "remainmoney"
+      ]
+    }
+  }
+}

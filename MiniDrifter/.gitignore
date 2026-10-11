@@ -1,0 +1,27 @@
+# secrets / local
+.env
+.env.*
+!.env.example
+config/llm.local.json
+runtime_evidence_secrets/
+**/workflow_object_pool.private.json
+
+# python
+__pycache__/
+*.py[cod]
+.eggs/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.venv/
+venv/
+
+# node (install locally if needed)
+node_modules/
+tools/jsparser/node_modules/
+
+# local run artifacts
+**/OUTPUT/
+sample_outputs/
+*.log

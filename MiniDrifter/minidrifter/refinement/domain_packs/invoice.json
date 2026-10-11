@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "domain_id": "invoice",
+  "display_name": "Invoice / billing",
+  "default_domain_label": "invoice",
+  "path_include": "/Invoice|EchInvoice|InvoiceTitle|InvTitle|/Tax|Pdf|SendPdf|Invoiceable",
+  "path_exclude": "\\.(png|jpg|gif|css|js)$|/static/|/assets/",
+  "method_rules": {
+    "get": {
+      "pattern": "(/List|History/List|Title/List|/Detail|ByOrderId|ByUserId|Amount/ByOrderId|Pdf/ByImgUrl|InvoiceableList|CarRental/Detail|/Usable\\?|Title/Detail)",
+      "method": "GET",
+      "confidence": 0.65,
+      "source": "domain_path_verb_e3"
+    },
+    "post_s1": {
+      "pattern": "(/Valid|ValidInvoiceReq|/Check|/Verify|SendPdfToEmail|SendPdf)",
+      "method": "POST",
+      "confidence": 0.68,
+      "source": "domain_path_verb_e3"
+    },
+    "post_s3": {
+      "pattern": "(/Add|/Update|/Delete|/Submit|Submit/Email|Submit/WithDesc|Title/Delete|Title/Add|Title/Update)",
+      "method": "POST",
+      "confidence": 0.72,
+      "source": "domain_path_verb_e3"
+    },
+    "post_s4": {
+      "pattern": "(payment|pay/|charge|withdraw|preauth|freeze)",
+      "method": "POST",
+      "confidence": 0.72,
+      "source": "domain_path_verb_e3"
+    },
+    "default_post": {
+      "pattern": "/Invoice/",
+      "method": "POST",
+      "confidence": 0.55,
+      "source": "domain_default_post_e3"
+    }
+  },
+  "side_effect_rules": [
+    {"match": "post_s4", "taxonomy": "S4_high_risk_business_action"},
+    {"match": "post_s3", "taxonomy": "S3_state_changing"},
+    {"match": "post_s1", "taxonomy": "S2_light_state_change", "also_if": "SendPdf|SendEmail"},
+    {"match": "get", "taxonomy": "S0_read_only"},
+    {"match": "method:POST", "taxonomy": "S1_query_like_post"},
+    {"default": "S1_query_like_post"}
+  ],
+  "replay_block_patterns": [
+    "post_s3", "post_s1", "SendPdf|SendEmail|Delete|Submit|Update|Add"
+  ],
+  "priority_reasons": {
+    "post_s3": "submit/delete/update — audit priority, no auto replay",
+    "get": "query/list/detail — first-hop workflow candidate",
+    "post_s1": "validation/check — S1 conservative",
+    "default": "domain path keyword"
+  },
+  "produces_rules": [
+    {"pattern": "/Invoice/Title/List", "fields": ["InvoiceTitleId", "TitleId"]},
+    {"pattern": "/Invoice/History/List", "fields": ["InvoiceId"]},
+    {"pattern": "/Invoice/List", "fields": ["InvoiceId", "OrderId"]},
+    {"pattern": "InvoiceableList", "fields": ["OrderId", "OrderNo"]},
+    {"pattern": "CarRental/Detail", "fields": ["ImgUrl", "InvoiceId"]},
+    {"pattern": "Amount/ByOrderId", "fields": ["Amount", "OrderId"]},
+    {"pattern": "Title/Detail", "fields": ["InvoiceTitleId", "TitleId", "TaxNo"]}
+  ],
+  "workflow": {
+    "entrypoint_rule": "get",
+    "deferred_rule": "post_s3|Delete|Submit",
+    "blocked_name_pattern": "submit|delete|send_email|sendpdf",
+    "chain": [
+      "UserId / Token / crypto context (baseline)",
+      "InvoiceTitle/List or InvoiceableList (first-hop)",
+      "InvoiceTitleId / OrderId / InvoiceId (produces)",
+      "Invoice Detail / Amount / History (query)",
+      "Submit / Delete / SendEmail (audit only, no auto replay)"
+    ]
+  }
+}

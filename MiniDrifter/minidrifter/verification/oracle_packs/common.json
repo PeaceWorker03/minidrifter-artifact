@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "transport_success_codes": [200, 201, 204],
+  "auth_failure_codes": [401, 403],
+  "rate_limit_codes": [429],
+  "server_error_codes": [500, 502, 503, 504],
+  "business_success_fields": ["code", "Code", "success", "Success", "isSuccess", "IsSuccess"],
+  "business_success_values": [0, "0", true, "true", "success", "Success"],
+  "permission_denied_patterns": ["permission", "forbidden", "unauthorized", "无权限", "没有权限"],
+  "validation_error_patterns": ["param", "invalid", "validation", "参数", "格式错误"],
+  "auth_expired_patterns": ["token", "expired", "login", "重新登录", "未登录"],
+  "binding_mismatch_fields": ["userId", "UserId", "OrderId", "orderId", "customerId"]
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Registry-rich header+encrypted-query — IsSuccess / ErrorCode envelope (extends common)",
+  "business_success_fields": ["IsSuccess", "isSuccess", "ErrorCode", "errorCode", "code", "Code"],
+  "business_success_values": [0, "0", true, "true", "success", "Success", "SUCCESS"],
+  "business_envelope_fields": ["IsSuccess", "ErrorCode", "Message", "Result", "result"]
+}

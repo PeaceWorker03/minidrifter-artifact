@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "domain_id": "order",
+  "display_name": "Order / rental",
+  "default_domain_label": "order",
+  "path_include": "/Order|/Orders|CarRental|Rental|Reservation|Booking",
+  "path_exclude": "\\.(png|jpg|gif|css|js)$|/static/|/assets/",
+  "method_rules": {
+    "get": {
+      "pattern": "(/List|/Detail|ByOrderId|ByUserId|History|Status)",
+      "method": "GET",
+      "confidence": 0.62,
+      "source": "domain_path_verb_e3"
+    },
+    "post_s3": {
+      "pattern": "(/Cancel|/Submit|/Create|/Update|/Delete|/Pay)",
+      "method": "POST",
+      "confidence": 0.70,
+      "source": "domain_path_verb_e3"
+    },
+    "default_post": {
+      "pattern": "/Order",
+      "method": "POST",
+      "confidence": 0.52,
+      "source": "domain_default_post_e3"
+    }
+  },
+  "side_effect_rules": [
+    {"match": "post_s3", "taxonomy": "S3_state_changing"},
+    {"match": "get", "taxonomy": "S0_read_only"},
+    {"match": "method:POST", "taxonomy": "S1_query_like_post"},
+    {"default": "S1_query_like_post"}
+  ],
+  "replay_block_patterns": ["post_s3", "Cancel|Submit|Delete|Pay"],
+  "priority_reasons": {
+    "post_s3": "state-changing order action — no auto replay",
+    "get": "order query — workflow candidate",
+    "default": "order domain path keyword"
+  },
+  "produces_rules": [
+    {"pattern": "/Order/List", "fields": ["OrderId", "OrderNo"]},
+    {"pattern": "ByOrderId", "fields": ["OrderId", "OrderNo"]},
+    {"pattern": "CarRental/Detail", "fields": ["OrderId", "ImgUrl"]}
+  ],
+  "workflow": {
+    "entrypoint_rule": "get",
+    "deferred_rule": "post_s3|Cancel|Submit",
+    "blocked_name_pattern": "cancel|submit|pay|delete",
+    "chain": [
+      "UserId / Token (baseline)",
+      "Order List / Detail (first-hop)",
+      "OrderId / OrderNo (produces)",
+      "Cancel / Pay / Submit (audit only)"
+    ]
+  }
+}

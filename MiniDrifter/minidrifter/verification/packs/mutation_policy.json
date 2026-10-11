@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "allowed_mutations": [
+    "M0_baseline_replay",
+    "M1_missing_optional_param",
+    "M2_missing_binding_param",
+    "M5_same_account_object_substitution",
+    "M7_subject_object_mismatch",
+    "M8_weaken_credential_guard"
+  ],
+  "allowed_operators": [
+    "replace_with_same_type_different_value",
+    "remove_optional_param",
+    "remove_binding_param",
+    "corrupt_param",
+    "remove_params"
+  ],
+  "blocked_mutations": [
+    "M4_delete_submit",
+    "M6_cross_account_substitution",
+    "M9_destructive_replay"
+  ],
+  "max_llm_proposals_per_campaign": 5,
+  "proposal_schema": "intent_v1",
+  "required_intent_fields": [
+    "proposal_type",
+    "mutation_type",
+    "target_field",
+    "mutation_operator",
+    "selector"
+  ],
+  "allowed_param_ref_pattern": "^\\$baseline\\.[A-Za-z_][A-Za-z0-9_]*$"
+}

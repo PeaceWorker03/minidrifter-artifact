@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Taro/bundle form-body transport — code=1 + status=SUCCESS envelope (extends common)",
+  "business_success_fields": ["code", "status", "Status"],
+  "business_success_values": [1, "1", "SUCCESS", "success", true, "true"],
+  "business_envelope_fields": ["code", "status", "msg", "content", "handler"]
+}

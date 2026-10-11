@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "auto_execute_side_effects": ["S0_read_only", "S1_query_like_post"],
+  "blocked_path_patterns": [
+    "submit", "delete", "payment", "pay/", "freeze", "bind", "sendpdf", "sendemail", "withdraw", "preauth"
+  ],
+  "max_tests_default": 20,
+  "rate_limit_per_host_per_minute": 30,
+  "require_explicit_execute_flag": true
+}

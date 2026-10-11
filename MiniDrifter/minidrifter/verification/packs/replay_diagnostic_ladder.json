@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "layers": [
+    {
+      "id": "L0_build",
+      "symptoms": ["build_failed", "missing_params", "crypto_engine_unavailable"],
+      "checks": ["materialized_templates", "baseline_pool", "crypto_profile"],
+      "actions": ["fix_build_or_missing_params", "import_baseline", "materialize_templates"]
+    },
+    {
+      "id": "L1_transport",
+      "symptoms": ["transport_error", "404", "transport_url_routing"],
+      "checks": ["http_status", "url_query_separator", "host_base_url"],
+      "actions": ["transport_url_repair", "diagnostic_transport"]
+    },
+    {
+      "id": "L2_crypto",
+      "symptoms": ["decrypt_failed", "authorization_mismatch"],
+      "checks": ["replay_preflight_crypto_parity", "intake_authorization_verified"],
+      "actions": ["crypto_profile_repair", "repair_baseline_version"]
+    },
+    {
+      "id": "L3_params",
+      "symptoms": ["validation_error", "param_schema_mismatch", "用户信息有误"],
+      "checks": ["intake_decrypted_query", "plain_template_param_source"],
+      "actions": ["schema_repair", "intake_baseline", "materialize_templates"]
+    },
+    {
+      "id": "L4_credential",
+      "symptoms": ["auth_expired", "1111000", "1011012"],
+      "checks": ["token_freshness", "per_api_token_scope"],
+      "actions": ["refresh_baseline_field", "refresh_baseline", "intake_baseline"]
+    },
+    {
+      "id": "L5_business",
+      "symptoms": ["app_version_blocked", "1011023", "business_state_blocked"],
+      "checks": ["app_version_probe", "error_code_taxonomy"],
+      "actions": ["version_baseline_repair", "continue_campaign"]
+    }
+  ],
+  "failure_class_to_layer": {
+    "build_failed": "L0_build",
+    "transport_error": "L1_transport",
+    "transport_url_routing": "L1_transport",
+    "auth_expired": "L4_credential",
+    "validation_error": "L3_params",
+    "param_schema_mismatch": "L3_params",
+    "app_version_blocked": "L5_business"
+  }
+}

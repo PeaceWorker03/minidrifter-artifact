@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "field_classes": {
+    "subject_credential": [
+      "UserId", "userId", "customerId", "CustomerId", "loginCustomerId",
+      "memberId", "platformUserId", "openId", "OpenId", "OperatorId"
+    ],
+    "session_credential": [
+      "Token", "Authorization", "AppIdentity", "Cookie", "SessionId",
+      "loginCustomerToken", "apiToken", "customerToken"
+    ],
+    "object_identifier": [
+      "OrderId", "orderId", "InvoiceId", "DeviceId", "AddressId", "CouponId", "TitleId",
+      "deptId", "DeptId", "cityId", "CityId", "storeId", "StoreId"
+    ],
+    "capability_credential": ["QRCode", "PayNo", "PrepayId", "AuthCode", "code"],
+    "ordinary_business_param": ["pageIndex", "pageSize", "type", "status", "token"]
+  },
+  "high_value_produces": [
+    "UserId", "userId", "OrderId", "orderId", "InvoiceId", "DeviceId",
+    "OpenId", "openId", "OrderNo", "InvoiceTitleId", "TitleId", "Amount"
+  ],
+  "chain_bridge_fields": [
+    "StoreId", "CityId", "CarId", "SkuId", "ContractNo", "BillNo", "RecordId",
+    "ApplyId", "StoreCode", "OrderNo", "BillId", "CarTypeId", "SkuCode",
+    "deptId", "DeptId", "cityId", "CityId"
+  ]
+}

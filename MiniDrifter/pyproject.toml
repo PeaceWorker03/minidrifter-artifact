@@ -1,0 +1,14 @@
+[project]
+name = "minidrifter"
+version = "0.4.0"
+description = "MiniDrifter: hybrid static taint + dynamic perturbation validator for RR-Drift threats in mini-programs."
+requires-python = ">=3.10"
+authors = [{name = "MiniDrifter Research"}]
+dependencies = ["pycryptodome>=3.20", "gmssl>=3.2", "networkx>=3.6"]
+
+[project.scripts]
+minidrifter = "minidrifter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["minidrifter*"]

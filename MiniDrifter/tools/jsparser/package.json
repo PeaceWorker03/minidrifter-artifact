@@ -1,0 +1,7 @@
+{
+  "name": "minidrifter-jsparser",
+  "private": true,
+  "dependencies": {
+    "acorn": "8.15.0"
+  }
+}
