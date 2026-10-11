@@ -6,6 +6,6 @@ CrossPlatformTransfer：该文件夹包含 RQ4 跨平台迁移评测结果，记
 
 Proof of Concept：该文件夹包含代表性案例的概念验证材料与相关佐证文件。
 
-419mintesapp_source.zip：RQ1 所用 419 个小程序源码打包文件（体积较大，以 GitHub Release 资产形式提供，不进入 git 树）。
+419mintesapp_source.zip：RQ1 所用 419 个小程序源码打包文件（约 1.4GB，超过 git 单文件限制）。请从 Release 下载：https://github.com/PeaceWorker03/minidrifter-artifact/releases/tag/data-sources-v1
 
 脱敏说明：公开数据中的程序编号均为匿名标识（如 `wx00001`、`qq001`），不包含真实小程序名称、原始 appid、后端 URL、鉴权材料及可直接利用的请求内容。各表加总已与论文图表对齐；复现时请自行按 CSV 字段汇总核对。
