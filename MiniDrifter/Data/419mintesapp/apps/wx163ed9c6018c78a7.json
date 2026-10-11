@@ -1,0 +1,23 @@
+{
+  "app_id": "wx163ed9c6018c78a7",
+  "name": "浙江工业大学",
+  "quota_category": "Education",
+  "evidence_path": "E:\\MiniCrest\\Data\\校园与教育\\浙江工业大学_wx163ed9c6018c78a7",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 2,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 3,
+    "taintmini_tp": 3,
+    "taintmini_fp": 0,
+    "taintmini_fn": 2,
+    "minidrifter_tp": 5,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 1,
+    "gt_threats": 5
+  },
+  "real_static": null,
+  "real_silver": null,
+  "record_status": "paper_reconciled_detection"
+}
