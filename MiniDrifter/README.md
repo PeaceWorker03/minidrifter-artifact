@@ -1,17 +1,15 @@
 # MiniDrifter
 
-**MiniDrifter** is a hybrid framework for detecting **RR-Drift** (resource-reference drift) propagation threats in mini-programs.
+**MiniDrifter** detects **RR-Drift** (resource-reference drift) propagation threats in mini programs. It combines:
 
-It implements the approach in the paper:
-
-1. **Static drift-oriented taint analysis** — RCR → RPGraph → risky RR-Drift propagation chains  
-2. **Dynamic perturbation validation** with adaptive execution repair  
+1. **Static analysis** — recover request contracts, build a reference-propagation graph, and find candidate drift chains from sources to sensitive sinks  
+2. **Dynamic validation** — perturb source references and repair failed executions when needed  
 
 ## Runtime Environment
 
-The MiniDrifter framework runs on an Ubuntu 24.04 LTS server with a 24-core CPU, 64 GB of memory, and Python 3.12.5, using eight parallel worker processes.
+Linux (Ubuntu 24.04 LTS recommended), Python 3.12.5. The evaluation server used 24 CPU cores, 64 GB RAM, and 8 worker processes.
 
-See also [`RUNTIME_ENVIRONMENT.md`](RUNTIME_ENVIRONMENT.md).
+See [RUNTIME_ENVIRONMENT.md](RUNTIME_ENVIRONMENT.md) for details.
 
 ## Install
 
@@ -36,7 +34,7 @@ python -m minidrifter.cli analyze \
   --platform wechat
 ```
 
-Rebuild propagation artifacts on an existing pack:
+Rebuild static artifacts on an existing OUTPUT directory:
 
 ```bash
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT

@@ -1,8 +1,8 @@
 # MiniCollector
 
-**MiniCollector** is the mini-program **collection and package reverse-analysis** framework used in the paper.
+**MiniCollector** collects WeChat mini programs and recovers their packages for analysis.
 
-It searches for and loads WeChat mini-programs through **UI control localization** on Windows WeChat, captures local code packages, extends **WeDecode** for unpacking / source recovery, and classifies recovered apps into the service categories used by RQ2.
+It searches for and loads apps through **UI control localization** on Windows WeChat, captures local code packages, uses **WeDecode** for unpacking / source recovery, and classifies recovered apps into service categories.
 
 This directory sits alongside `MiniDrifter/` and `Data/` in the artifact repository.
 
