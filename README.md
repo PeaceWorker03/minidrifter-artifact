@@ -148,13 +148,15 @@ Emergency stop for UI collection: move the mouse to the **top-left corner** of t
 
 ### Deployment requirements
 
-1. **Linux server** (Ubuntu 24.04 LTS recommended) with Python **3.12.5**.
-2. Build tools for native wheels if needed (`build-essential`).
-3. Unpacked mini-program source trees as analysis input (from MiniCollector / `Data` releases).
-4. Optional: Node.js for `tools/jsparser` (JS call-site helper).
-5. For **dynamic** validation: runtime materials / session context for the target app (platform-dependent); static `analyze` / `paper-static` can run without live login.
+| Need | Detail |
+|------|--------|
+| OS / Python | Linux server (Ubuntu 24.04 LTS recommended), Python 3.12.5 |
+| Native build tools | Install build-essential if pip needs to compile wheels |
+| Analysis input | Unpacked mini-program source trees (MiniCollector output, or Data release assets) |
+| Optional Node.js | Only if you use the JS helper under MiniDrifter/tools/jsparser |
+| Dynamic validation | Needs runtime / session materials for the target app; static commands analyze and paper-static do not need live login |
 
-`--platform` selects which mini-program API surface to recognize (default `wechat`). Choices: `wechat`, `alipay`, `baidu`, `tiktok`.
+Platform flag for analyze: **--platform** (default **wechat**). Allowed values: **wechat**, **alipay**, **baidu**, **tiktok**.
 
 ### Install
 
@@ -188,17 +190,17 @@ python -m minidrifter.cli analyze \
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT
 ```
 
-### Main outputs under `OUTPUT/`
+### Main outputs under OUTPUT/
 
 After analysis, MiniDrifter writes intermediate and final results into the output directory, including:
 
 | File | Description |
 |------|-------------|
-| `rcr_pack.json` | Per-request reference contracts recovered from the mini program |
-| `rpgraph.json` | Reference propagation graph over API / reference nodes and edges |
-| `rrdrift_propagation_chains.json` | Candidate RR-Drift chains from drift sources to sensitive sinks |
-| `workflows.json` | Convenience export of the same chain set |
-| `drift_plans.json` | Plans used by the dynamic validator to perturb source references |
+| rcr_pack.json | Per-request reference contracts recovered from the mini program |
+| rpgraph.json | Reference propagation graph over API / reference nodes and edges |
+| rrdrift_propagation_chains.json | Candidate RR-Drift chains from drift sources to sensitive sinks |
+| workflows.json | Convenience export of the same chain set |
+| drift_plans.json | Plans used by the dynamic validator to perturb source references |
 
 See [`MiniDrifter/README.md`](MiniDrifter/README.md) for CLI details and more options.
 

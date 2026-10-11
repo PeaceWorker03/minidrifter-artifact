@@ -42,17 +42,17 @@ Rebuild propagation artifacts on an existing pack:
 python -m minidrifter.cli paper-static -i /path/to/OUTPUT
 ```
 
-`--platform` selects the mini-program API surface (default `wechat`): `wechat`, `alipay`, `baidu`, `tiktok`.
+Platform flag: **--platform** (default **wechat**). Allowed values: **wechat**, **alipay**, **baidu**, **tiktok**.
 
-## Main outputs under `OUTPUT/`
+## Main outputs under OUTPUT/
 
 | File | Description |
 |------|-------------|
-| `rcr_pack.json` | Per-request reference contracts recovered from the mini program |
-| `rpgraph.json` | Reference propagation graph over API / reference nodes and edges |
-| `rrdrift_propagation_chains.json` | Candidate RR-Drift chains from drift sources to sensitive sinks |
-| `workflows.json` | Convenience export of the same chain set |
-| `drift_plans.json` | Plans used by the dynamic validator to perturb source references |
+| rcr_pack.json | Per-request reference contracts recovered from the mini program |
+| rpgraph.json | Reference propagation graph over API / reference nodes and edges |
+| rrdrift_propagation_chains.json | Candidate RR-Drift chains from drift sources to sensitive sinks |
+| workflows.json | Convenience export of the same chain set |
+| drift_plans.json | Plans used by the dynamic validator to perturb source references |
 
 ## Layout
 
