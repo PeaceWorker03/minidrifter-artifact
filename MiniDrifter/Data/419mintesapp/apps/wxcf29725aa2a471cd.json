@@ -1,0 +1,34 @@
+{
+  "app_id": "wxcf29725aa2a471cd",
+  "name": "旅划算",
+  "quota_category": "Life Services",
+  "evidence_path": "E:\\MiniCrest\\Data\\交通出行、租车服务\\旅划算_wxcf29725aa2a471cd",
+  "source_exists": true,
+  "paper_detection": {
+    "keymagnet_tp": 0,
+    "keymagnet_fp": 0,
+    "keymagnet_fn": 0,
+    "taintmini_tp": 0,
+    "taintmini_fp": 0,
+    "taintmini_fn": 0,
+    "minidrifter_tp": 0,
+    "minidrifter_fp": 0,
+    "minidrifter_fn": 0,
+    "gt_affected": 0,
+    "gt_threats": 0
+  },
+  "real_static": null,
+  "real_silver": {
+    "status": "ok",
+    "stats": {
+      "api_count": 6,
+      "credential_count": 19,
+      "binding_edge_count": 22,
+      "workflow_count": 1,
+      "crbd_candidate_count": 0,
+      "elapsed_sec": 1.7
+    },
+    "annotation_path": "D:\\Work\\NKU\\Fse\\EP\\experiment1\\results\\rq1_annotations\\wxcf29725aa2a471cd\\annotation.json"
+  },
+  "record_status": "silver+paper_detection"
+}
