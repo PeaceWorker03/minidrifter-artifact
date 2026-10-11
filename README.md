@@ -15,7 +15,7 @@ Evaluation on an annotated benchmark confirms the high effectiveness of MiniDrif
 <p align="center">
   <img src="Fig/Fig1.png" alt="Motivation: RR-Drift in a shopping mini-program workflow" width="90%"/>
 </p>
-<p align="center"><em>Figure 1.</em> A representative RR-Drift propagation threat in a shopping mini-program workflow (<code>mini_x</code>). [<a href="Fig/Fig1.pdf">PDF</a>]</p>
+<p align="center"><em>Figure 1.</em> A representative RR-Drift propagation threat in a shopping mini-program workflow.</p>
 
 Figure 1 illustrates a representative case of *resource reference drift* (RR-Drift) and its threats across a business workflow in a shopping mini program operated by a leading restaurant chain in China, which we anonymize as `mini_x` for responsible disclosure.
 
@@ -37,7 +37,7 @@ At the most critical stage of payment-password verification, `user_A` continues 
 <p align="center">
   <img src="Fig/Fig2.png" alt="MiniDrifter hybrid detection workflow" width="90%"/>
 </p>
-<p align="center"><em>Figure 2.</em> Overview of <em>MiniDrifter</em>: static drift-oriented taint analysis and dynamic perturbation validation. [<a href="Fig/Fig2.pdf">PDF</a>]</p>
+<p align="center"><em>Figure 2.</em> Overview of MiniDrifter: static drift-oriented taint analysis and dynamic perturbation validation.</p>
 
 From the four conditions defined in the problem formulation, the detection of RR-Drift propagation threats can be naturally formulated as a taint-oriented reachability problem. In particular, the drifted resource reference serves as the *source*, while the sensitive-risk resource reference serves as the *sink*. The key question is whether there exists a cross-API reference dependency chain that propagates a drifted reference from the source to the sink within the workflow.
 
